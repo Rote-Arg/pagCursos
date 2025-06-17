@@ -1,11 +1,11 @@
 # Base image
-FROM nginx:1.21.1-alpine
+FROM nginx:latest
 
 # Create app directory
-WORKDIR /pagCursos
+WORKDIR /pagCursos-web
 
 # Copy app files
-COPY ./ /pagCursos
+COPY . /usr/share/nginx/html/pagCursos-web
 
 # Expose port
 EXPOSE 5054
